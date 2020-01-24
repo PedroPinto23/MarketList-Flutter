@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                             controller: _toDoController,
                             decoration: InputDecoration(
                                 labelText: "Insira um novo Item",
-                                labelStyle: GoogleFonts.anton(
+                                labelStyle: GoogleFonts.permanentMarker(
                                     color: Colors.green,
                                     textStyle: TextStyle(fontSize: 18))),
                           ),
@@ -144,7 +144,7 @@ class _HomeState extends State<Home> {
 
   Widget buildItem(context, index) {
     return Opacity(
-      opacity: 0.77,
+      opacity: 0.85,
       child: Card(
         child: Dismissible(
             key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
@@ -161,12 +161,14 @@ class _HomeState extends State<Home> {
             direction: DismissDirection.startToEnd,
             child: CheckboxListTile(
               title: Text(_toDoList[index]['title'],
-                  style: GoogleFonts.balooBhai(
-                      color: Colors.black, textStyle: TextStyle(fontSize: 25))),
+                  style: GoogleFonts.permanentMarker(
+                      color: Colors.orange,
+                      textStyle: TextStyle(fontSize: 25))),
               value: _toDoList[index]['ok'],
               secondary: CircleAvatar(
                 child: Icon(
                   _toDoList[index]['ok'] ? Icons.check : Icons.error,
+                  color: Colors.red,
                 ),
               ),
               onChanged: (c) {

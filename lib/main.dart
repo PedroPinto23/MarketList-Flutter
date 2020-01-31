@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Lista de Tarefas',
+    title: 'Lista de Compras',
     debugShowCheckedModeBanner: false,
     home: Home(),
   ));
